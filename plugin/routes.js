@@ -29,7 +29,7 @@
 
         // Client edit page
         routeHelpers.setupPageRoute(
-            router, '/user/:userslug/edit/custom-fields',
+            router, '/user/:userslug/edit',
             middleware, [middleware.checkGlobalPrivacySettings, middleware.checkAccountPermissions],
             Module.renderClient);
 
@@ -59,7 +59,6 @@
                     userData.breadcrumbs = helpers.buildBreadcrumbs([
                         {text: userData.username, url: '/user/' + userData.userslug},
                         {text: '[[user:edit]]', url: '/user/' + userData.userslug + '/edit'},
-                        {text: 'Custom Fields'}
                     ]);
                     userData.customFields = fields;
 
