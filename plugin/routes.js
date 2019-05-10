@@ -70,7 +70,7 @@
                 return res.render('500', {});
             }
 
-            res.render('client/plugins/custom-fields-edit', result);
+            res.render('account/edit', result);
         });
     };
 
