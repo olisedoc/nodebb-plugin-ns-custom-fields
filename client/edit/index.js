@@ -28,13 +28,13 @@ define('forum/client/plugins/custom-fields-edit', [], function () {
                 return app.alertError(error.message);
             }
 
-            app.alertSuccess('Custom fields are saved.');
+            app.alertSuccess('Work details are saved.');
         });
     };
 
     function appendControl($container) {
         var $row = $('<div></div>').addClass('row');
-        var $column = $('<div></div>').addClass('col-md-4 col-md-offset-4 form-actions');
+        var $column = $('<div></div>').addClass('col-md-2 form-actions');
         var $button = $('<a></a>')
             .addClass('btn btn-primary btn-block')
             .attr('href', '#')
@@ -122,9 +122,9 @@ define('forum/client/plugins/custom-fields-edit', [], function () {
         var $form = $('<form></form>').addClass('form-horizontal');
         var $row = $('<div></div>').addClass('row');
         var columns = [
-            $('<div></div>').addClass('col-md-4'),
-            $('<div></div>').addClass('col-md-4'),
-            $('<div></div>').addClass('col-md-4')
+            $('<div></div>').addClass('col-md-6'),
+            $('<div></div>').addClass('col-md-6'),
+            $('<div></div>').addClass('col-md-6')
         ];
 
         $parent.append($form);

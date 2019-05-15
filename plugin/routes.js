@@ -59,7 +59,7 @@
                     userData.breadcrumbs = helpers.buildBreadcrumbs([
                         {text: userData.username, url: '/user/' + userData.userslug},
                         {text: '[[user:edit]]', url: '/user/' + userData.userslug + '/edit'},
-                        {text: 'Custom Fields'}
+                        {text: 'Work details'}
                     ]);
                     userData.customFields = fields;
 
