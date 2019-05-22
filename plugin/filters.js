@@ -55,6 +55,32 @@
         });
     };
 
+    /**
+     * Hook to render user list.
+     * 'users' will be used as payload in hook handler.
+     * @param params {object} Payload :{users: users, uid: callerUID}
+     * @param callback {function}
+     */
+    Filter.userlist = function(params, callback) {
+        async.map(params.users, function(user, next) {
+                getCustomFields(user.uid, function(error, customFields) {
+                    if (error) {
+                        return next(error);
+                    }
+                    user.customFields = customFields;
+                    next(null, user);
+                });
+            },
+            function(error, results) {
+                if (error) {
+                    return callback(error);
+                }
+                params.users = results;
+                callback(null, params);
+            }
+        );
+    };
+
     Filter.menu = function (custom_header, callback) {
         custom_header.plugins.push({
             route: '/plugins/custom-fields',

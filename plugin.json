@@ -24,6 +24,10 @@
     {
       "hook": "filter:user.account.edit",
       "method": "hooks.filters.userAccountEdit"
+    },
+    {
+      "hook": "filter:userlist.get",
+      "method": "hooks.filters.userlist"
     }
   ],
   "less": [
